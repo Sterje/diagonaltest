@@ -19,8 +19,8 @@
 }
 
 .diagonal {
-    position: relative;
-    isolation: isolate;
+    position: relative; /*För att pseudoelementet är absolute och ska stanna i elementet. */
+    isolation: isolate; /*För att pseudoelementet ska stanna i elementet och inte hamna bakom */
     background: transparent;
 }
 
@@ -29,7 +29,7 @@
     padding: 1rem;
     font-size: 4rem;
     background: transparent;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* För reponsivitet */
     
 
 }
@@ -37,16 +37,16 @@
 .section-title {
     font-size: 2rem;
     background: transparent;
-    transform: skewY(-5deg);
+    transform: skewY(-5deg); /*Roterar texten */
 }
 
-.diagonal::after {
+.diagonal::after { /*Skapar pseudoelementet ::after */
     content: '';
     background-image: linear-gradient(45deg, #b30b0b, #54088a, #fdec09);
-    position: absolute;
+    position: absolute; /*för att pseudoelementet ska stanna i diaganol */
     z-index: -1;
-    transform: skewY(-5deg);
-    inset: 0;
+    transform: skewY(-5deg); /*Roterar elementet */
+    inset: 0; 
 }
 
 section {
